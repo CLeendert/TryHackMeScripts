@@ -9,4 +9,4 @@ with zipfile.ZipFile("final-final-compressed.zip", "r") as zip_ref:
         if l.endswith(".zip"):
             with zipfile.ZipFile("final-final-compressed/"+l, "r") as zip_2:
                 zip_2.extractall("final-final-compressed")
-
+                os.remove("final-final-compressed/"+l)
